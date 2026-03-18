@@ -1,0 +1,48 @@
+.app {
+  min-height: 100vh;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.app-header {
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.app-header h1 {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+  animation: bounce 1s infinite;
+}
+
+.app-header p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .app-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .app-header p {
+    font-size: 1rem;
+  }
+
+  .app {
+    padding: 15px;
+  }
+}

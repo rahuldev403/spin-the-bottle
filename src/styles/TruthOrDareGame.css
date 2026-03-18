@@ -1,0 +1,365 @@
+.game-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.game-header h2 {
+  color: white;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.reset-btn {
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.reset-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.challenge-section {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  margin: 40px 0;
+  animation: slideUp 0.5s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.selected-player {
+  text-align: center;
+  margin-bottom: 30px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  animation: pulse 0.6s ease;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.selected-player h3 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.choice-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.truth-btn,
+.dare-btn {
+  flex: 1;
+  min-width: 150px;
+  padding: 20px 30px;
+  border: none;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.truth-btn {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+}
+
+.truth-btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(102, 126, 234, 0.4);
+}
+
+.dare-btn {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+  color: white;
+}
+
+.dare-btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(255, 107, 107, 0.4);
+}
+
+.challenge-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.challenge-card {
+  width: 100%;
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  animation: fadeInScale 0.5s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.challenge-card.truth {
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.1),
+    rgba(118, 75, 162, 0.1)
+  );
+  border-left: 5px solid #667eea;
+}
+
+.challenge-card.dare {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 107, 107, 0.1),
+    rgba(238, 90, 111, 0.1)
+  );
+  border-left: 5px solid #ff6b6b;
+}
+
+.challenge-type {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #666;
+}
+
+.challenge-card.truth .challenge-type {
+  color: #667eea;
+}
+
+.challenge-card.dare .challenge-type {
+  color: #ff6b6b;
+}
+
+.challenge-text {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 600;
+  line-height: 1.6;
+  margin: 15px 0;
+}
+
+.next-round-btn {
+  padding: 15px 40px;
+  background: linear-gradient(135deg, #51cf66, #40c057);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 8px 20px rgba(81, 207, 102, 0.3);
+}
+
+.next-round-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(81, 207, 102, 0.5);
+}
+
+.history-section {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 30px;
+  margin-top: 40px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.history-section h3 {
+  color: #667eea;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.history-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 15px;
+  border-radius: 10px;
+  background: #f8f9fa;
+  border-left: 4px solid #ddd;
+}
+
+.history-item.truth {
+  background: rgba(102, 126, 234, 0.05);
+  border-left-color: #667eea;
+}
+
+.history-item.dare {
+  background: rgba(255, 107, 107, 0.05);
+  border-left-color: #ff6b6b;
+}
+
+.history-round {
+  font-weight: 700;
+  color: #666;
+  font-size: 0.85rem;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.history-player {
+  font-weight: 700;
+  color: #333;
+  flex: 0 0 auto;
+}
+
+.history-type {
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 4px 12px;
+  border-radius: 12px;
+  flex: 0 0 auto;
+}
+
+.history-type.truth {
+  background: rgba(102, 126, 234, 0.2);
+  color: #667eea;
+}
+
+.history-type.dare {
+  background: rgba(255, 107, 107, 0.2);
+  color: #ff6b6b;
+}
+
+.history-challenge {
+  width: 100%;
+  color: #555;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Scrollbar styling */
+.history-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.history-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.history-list::-webkit-scrollbar-thumb {
+  background: #667eea;
+  border-radius: 10px;
+}
+
+.history-list::-webkit-scrollbar-thumb:hover {
+  background: #764ba2;
+}
+
+@media (max-width: 768px) {
+  .game-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .game-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .challenge-section {
+    padding: 25px;
+  }
+
+  .selected-player h3 {
+    font-size: 1.4rem;
+  }
+
+  .choice-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .truth-btn,
+  .dare-btn {
+    min-width: auto;
+  }
+
+  .challenge-text {
+    font-size: 1.2rem;
+  }
+
+  .challenge-card {
+    padding: 25px;
+  }
+
+  .history-section {
+    padding: 20px;
+  }
+
+  .history-item {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
