@@ -7,7 +7,7 @@ function PlayerSetup({ onStartGame }) {
   const [submitted, setSubmitted] = useState(false);
 
   const handleNumPlayersChange = (e) => {
-    const num = Math.min(Math.max(parseInt(e.target.value) || 2, 2), 10);
+    const num = Math.min(Math.max(parseInt(e.target.value) || 2, 2), 30);
     setNumPlayers(num);
     const newPlayers = Array.from({ length: num }, (_, i) => `Player ${i + 1}`);
     setPlayers(newPlayers);
@@ -42,7 +42,7 @@ function PlayerSetup({ onStartGame }) {
               type="range"
               id="num-players"
               min="2"
-              max="10"
+              max="30"
               value={numPlayers}
               onChange={handleNumPlayersChange}
               className="range-input"

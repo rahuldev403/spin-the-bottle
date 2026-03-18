@@ -5,7 +5,7 @@ A fun and interactive Truth or Dare spinning bottle game built with React!
 ## Features
 
 ✨ **Interactive Spinning Bottle Animation** - Smooth rotating bottle with realistic spin physics
-🎯 **Player Selection** - Bottle randomly selects from 2-10 players positioned around a circle
+🎯 **Player Selection** - Bottle randomly selects from 2-30 players positioned around a circle
 ❓ **Truth or Dare** - Players choose between truth questions or dares
 🎲 **Extensive Challenge Library** - 25+ unique truth questions and 25+ exciting dares
 📜 **Game History** - Track all challenges throughout the game
@@ -48,7 +48,7 @@ A fun and interactive Truth or Dare spinning bottle game built with React!
 
 ## How to Play
 
-1. **Setup:** Enter the number of players (2-10)
+1. **Setup:** Enter the number of players (2-30)
 2. **Name Players:** Give each player a custom name (optional - defaults provided)
 3. **Start Game:** Click "Start Game"
 4. **Spin:** Click "SPIN THE BOTTLE" to start the game
@@ -165,4 +165,5 @@ This project is open source and available for personal and educational use.
 ## Enjoy! 🎉
 
 Have fun playing Truth or Dare with your friends and family!
+
 # spin-the-bottle
