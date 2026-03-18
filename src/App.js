@@ -6,10 +6,8 @@ import TruthOrDareGame from "./components/TruthOrDareGame";
 function App() {
   const [gameStarted, setGameStarted] = useState(false);
   const [players, setPlayers] = useState([]);
-  const [numPlayers, setNumPlayers] = useState(0);
 
   const handleStartGame = (numPlayers, playersList) => {
-    setNumPlayers(numPlayers);
     setPlayers(playersList);
     setGameStarted(true);
   };
@@ -17,7 +15,6 @@ function App() {
   const handleResetGame = () => {
     setGameStarted(false);
     setPlayers([]);
-    setNumPlayers(0);
   };
 
   return (

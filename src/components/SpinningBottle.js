@@ -8,7 +8,6 @@ function SpinningBottle({ players, onSpinComplete, isSpinning }) {
     if (isSpinning) return;
 
     // Random rotations (at least 5 full rotations + random angle)
-    const randomIndex = Math.floor(Math.random() * players.length);
     const anglePerPlayer = 360 / players.length;
     const randomAngle = Math.random() * 360;
     const totalRotation = rotation + 5 * 360 + randomAngle;
